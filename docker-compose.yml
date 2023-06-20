@@ -15,7 +15,7 @@ services:
       - dbdata:/var/opt/mssql/data
       - ./scripts/docker-entrypoint.sh:/entrypoint.sh
       - ./scripts/docker-db-init.sh:/db-init.sh
-      - ./scripts/create-table.sql:/db-init.sql
+      - ./scripts/docker-db-init.sql:/db-init.sql
       
   adminer:
     image: adminer
