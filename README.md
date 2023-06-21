@@ -13,7 +13,7 @@ liquibase.command.url=jdbc:sqlserver://localhost:1433;databaseName=mydatabase;in
 
 ```
 
-create and configure a changelog file to use multiple sql files, and use it in liquibase.properties:
+create and configure a changelog file to use multiple sql files, and use it in liquibase.properties. we will use the folder 'changes' to store the files:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?> 
