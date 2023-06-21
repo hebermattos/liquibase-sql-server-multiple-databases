@@ -38,9 +38,6 @@ liquibase.properties:
 changeLogFile=changelog.xml
 ```
 
-- run the dockercompose, that will up a sqlserver with database a called 'mydatabase'
+- run the dockercompose, that will up a sqlserver with database a called 'mydatabase' and the Adminer UI
 - go to the liquibase project folder and run 'liquibase update'
 - you can check the changes on Adminer UI http://localhost:8081/
-
-
-
