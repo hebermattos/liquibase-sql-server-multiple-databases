@@ -30,6 +30,8 @@ create and configure a changelog file to use multiple sql files, and use it in l
 </databaseChangeLog>
 ```
 
+liquibase.properties:
+
 ```
 changeLogFile=changelog.xml
 ```
