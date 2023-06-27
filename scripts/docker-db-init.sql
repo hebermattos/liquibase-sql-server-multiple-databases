@@ -7,5 +7,5 @@ IF DB_ID('mydatabase') IS NOT NULL
 CREATE DATABASE [mydatabase];
 GO
 
-USE [mydatabase]
+CREATE DATABASE [mydatabase2];
 GO
