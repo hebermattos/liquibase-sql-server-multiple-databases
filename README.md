@@ -8,7 +8,7 @@ create a project:
 c:\MyLiquiBaseProject\liquibase init project
 ```
 
-configure the connection string in liquibase.properties:
+configure the connection string in liquibase.properties for each database:
 
 ```
 liquibase.command.url=jdbc:sqlserver://localhost:1433;databaseName=mydatabase;integratedSecurity=false;encrypt=false 
@@ -39,7 +39,7 @@ changeLogFile=changelog.xml
 ```
 
 - run the dockercompose, that will up a sqlserver with database a called 'mydatabase' and the Adminer UI
-- go to the liquibase project folder and run 'liquibase --defaultsFile="db1\liquibase.properties" update'
+- run 'update-all.ps1' to update all databases 
 - you can check the changes on Adminer UI http://localhost:8081/
 
 
