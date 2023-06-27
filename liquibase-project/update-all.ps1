@@ -1,4 +1,4 @@
-$databases = @("db1", "db2")
+$databases = Get-Content -Path .\databases.txt 
 
 foreach ($database in $databases) {
     $command = "liquibase --defaultsFile=`"{DATABASE}\liquibase.properties`" update"
