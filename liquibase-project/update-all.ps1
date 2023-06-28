@@ -1,7 +1,8 @@
-$databases = Get-Content -Path .\databases.txt 
 
-foreach ($database in $databases) {
-    $command = "liquibase --defaultsFile=`"{DATABASE}\liquibase.properties`" update"
-    $command = $command.Replace('{DATABASE}', $database)
+$configs = Get-ChildItem -Recurse ".\properties"  | Select-Object Name
+
+foreach ($config in $configs) {
+    $command = "liquibase --defaultsFile=`"{CONFIG}`" update"
+    $command = $command.Replace('{CONFIG}', $config.Name)
     Invoke-Expression $command
 }
