@@ -2,20 +2,15 @@
 
 ### basic usage with SQL Server
 
-create a project:
 
-```
-c:\MyLiquiBaseProject\liquibase init project
-```
-
-configure the connection string in liquibase.properties for each database:
+configure the connection string in dbXXX.properties for each database, example:
 
 ```
 liquibase.command.url=jdbc:sqlserver://localhost:1433;databaseName=mydatabase;integratedSecurity=false;encrypt=false 
 
 ```
 
-create and configure a changelog file to use multiple sql files, and use it in liquibase.properties. we will use the folder 'changes' to store the files:
+create and configure a changelog file to use multiple sql files, and use it in dbXXX.properties. we will use the folder 'changes' to store the files:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?> 
@@ -38,8 +33,10 @@ liquibase.properties:
 changeLogFile=changelog.xml
 ```
 
-- run the dockercompose, that will up a sqlserver with database a called 'mydatabase' and the Adminer UI
+- run the dockercompose, that will up a sqlserver with the databases 'mydatabase' and 'mydatabase2' and the Adminer UI
+
 - run 'update-all.ps1' to update all databases 
+
 - you can check the changes on Adminer UI http://localhost:8081/
 
 
